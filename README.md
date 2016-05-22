@@ -1,4 +1,4 @@
-# Employee Directory with Ionic and Node
+# Employee Directory with Ionic , Angular and Node
 
 Employee directory is a sample application that allows you to look up employees by name, view the details of an employee,
 call, text, or email an employee.
