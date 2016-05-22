@@ -20,7 +20,7 @@ Click [here](http://54.251.166.78:9091/#/search) to run the hosted version in yo
 
 1. Clone this repository
 
-1. On the command line, navigate (cd) to the **directory-ionic-nodejs** folder
+1. On the command line, navigate (cd) to the **innerHour** folder
 
 1. Install the server dependencies
 
