@@ -1,0 +1,16 @@
+<ion-view title="Employee in Detail">
+    <ion-content has-header="true" padding="true">
+        <ion-list>
+            <ion-item ng-repeat="employee in employees" class="list card" >
+                  
+                  <div class="item item-avatar">
+                    <img src="pics/{{employee.id}}.jpg"/>
+                    <h2>{{employee.firstName}} {{employee.lastName}}</h2>              
+                </div>
+                 <i class="icon ion-person"></i>  EMP00{{employee.id}}<br>
+                <i class="icon ion-navigate"></i>   {{employee.streetAddress}}<br>
+                    <i class="icon ion-location"></i>   {{employee.city}}
+                </ion-item>
+          </ion-list>
+     </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view title="Employees List">
+
+   <div class="bar bar-subheader item-input-inset">
+
+
+     <select id ="searchType" ng-model="searchType" class ="button">
+      <option selected> Pick one </option>
+      <option id ="id">ID </option>
+      <option id="city">CITY</option>
+    </select>
+        
+        <div class="item-input-wrapper">
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey"  autocorrect="on" >
+            <button type ="input" class="button button-clear" ng-click="clearSearch()">X</button>
+        </div>
+        <button type="input" class="button button-clear" ng-click="search()">Search</button>
+
+    </div>
+
+    <ion-content class="has-header has-subheader">
+       <div ng-controller="PageChangeCtrl" class="other-controller">
+           <div class="text-center">
+                 <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="js/pagination/dirPagination.tpl.html"></dir-pagination-controls>
+              </div>
+        </div>
+        <ion-list>
+<!--         <ion-item ng-repeat="employee in employees" type="item-text-wrap" 
+             class="item-avatar" href="#/employees/{{employee.id}}">
+ -->
+                  
+         <ion-item dir-paginate="employee in employees | itemsPerPage: pageSize" current-page="currentPage" type="item-text-wrap" class="item-avatar" href="#/employees/{{employee.id}}">
+              
+              <img src="pics/{{employee.id}}.jpg"/>
+                {{employee.firstName}} {{employee.lastName}}
+                <p> 
+                <i class="icon ion-person"></i>         EMP00{{employee.id}}
+                <br>
+                <i class="icon ion-navigate"></i>      {{employee.streetAddress}}
+                <br>
+                <i class="icon ion-location"></i>    {{employee.city}}</p>
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+
+</ion-view>
